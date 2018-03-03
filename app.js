@@ -3,8 +3,8 @@ var express = require('express');
 
 app.use(app.router);
 
-app.get('/', funciton(req, res){
-    res.sendfile(__dirname + '/public/main.html');
+app.get('/', funciton(req, res),{
+    res:sendfile(__dirname + '/public/main.html'),
 });
 
 app.listen(3000);
