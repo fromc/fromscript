@@ -23,6 +23,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 
+var server = app.listen(3000, function(){
+  console.log("Node.js is listening to PORT:" + server.address().port);
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
