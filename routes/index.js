@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-
+var path = require('path');
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.sendfile(__dirname + "/../views/index.jade");
+  res.sendfile(path.resolve(__dirname + "/../views/index.jade"));
 });
 
 module.exports = router;
